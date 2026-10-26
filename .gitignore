@@ -1,0 +1,21 @@
+
+# R and RStudio temporary files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# macOS system files
+.DS_Store
+
+# Temporary files
+*.Rout
+*.log
+
+# Large model outputs
+Results/*.rds
+Results/*.RData
+
+# ASReml temporary files
+*.asr
+*.res
