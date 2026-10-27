@@ -37,9 +37,9 @@ In GY-only models, the secondary-phenotype column does not apply. These descript
 
 ### Experimental design schematic
 
-![Experimental design showing Complete-GY and Sparse-GY training designs across observed, partially observed, and unobserved candidate scenarios](Figures/Figure3_simplified.png)
+![Experimental design showing Complete-GY and Sparse-GY training designs across observed, partially observed, and unobserved candidate scenarios](Figures/TRN_design.png)
 
-**Figure 1.** Schematic of the phenotypic information available under the Complete-GY and Sparse-GY training designs and the three candidate-observation scenarios. Each pair of rows represents grain yield (GY) only or GY combined with a secondary trait (NDRE, PC1, IGYMF, or IGYMLR). The complete-GY TRN retained all training GY records, whereas sparse-GY retained 40%; secondary-trait records remained fully available. Colored tiles denote observed records: GY (orange; harvester), blue tiles indicate observed secondary trait, and gray tiles indicate missing records. Each of the ten training tiles represents 10% of the TRN records, whereas the candidate tile represents the fixed set of 100 lines. The dashed line separates the training and selection candidate sets.
+**Figure 1.** Schematic of the phenotypic information available under the Complete-GY and Sparse-GY training designs and the three candidate-observation scenarios. **Orange** indicates observed grain yield (GY), **dark blue** indicates an available secondary trait, and **light gray** indicates missing or withheld observations. The panels represent observed (top), partially observed (middle), and unobserved (bottom) candidates. The figure is conceptual; the R scripts and input data determine which records are actually used for each analysis.
 
 ## Repository organization
 
@@ -48,7 +48,7 @@ ImputedGY-SecondaryTrait-GS/
 ├── README.md
 ├── .gitignore
 ├── Figures/
-│   └── Figure3_simplified.png
+│   └── TRN_design.png
 ├── IGY-SecondaryTrait-GS.Rproj
 ├── R/
 │   ├── Functions_earlyGS.R
