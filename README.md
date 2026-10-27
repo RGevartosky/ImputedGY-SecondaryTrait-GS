@@ -13,10 +13,10 @@ This repository contains multi-trait, multi-environment (MTME) genomic predictio
 | Model | Responses | Factor-analytic rank used in the supplied scripts |
 | --- | --- | --- |
 | GY-only | Observed grain yield | FA2 |
-| GY + imputed GY (MLR) | GY and multiple-linear-regression-imputed GY | FA4 |
-| GY + imputed GY (MF) | GY and missForest-imputed GY | FA5 |
+| GY + IGY (MLR) | GY and multiple-linear-regression-imputed GY | FA4 |
+| GY + IGY (MF) | GY and missForest-imputed GY | FA5 |
 | GY + NDRE | GY and normalized difference red edge index | FA5 |
-| GY + PC1 | GY and the first principal component of secondary phenotypes | FA5 |
+| GY + PC1 | GY and the first principal component of vegetation indices (NDVI, GNDVI, and NDRE) | FA5 |
 
 The models include a genomic factor-analytic term across trait-environment combinations, additional diagonal genomic and non-genomic genetic terms, block effects, and an AR1-by-AR1 spatial residual structure within each trait-environment. Scripts use **ASReml-R**.
 
@@ -39,7 +39,7 @@ In GY-only models, the secondary-phenotype column does not apply. These descript
 
 ![Experimental design showing Complete-GY and Sparse-GY training designs across observed, partially observed, and unobserved candidate scenarios](Figures/Figure3_simplified.png)
 
-**Figure 1.** Schematic of the phenotypic information available under the Complete-GY and Sparse-GY training designs and the three candidate-observation scenarios. **Orange** indicates observed grain yield (GY), **dark blue** indicates an available secondary trait, and **light gray** indicates missing or withheld observations. The panels represent observed (top), partially observed (middle), and unobserved (bottom) candidates. The figure is conceptual; the R scripts and input data determine which records are actually used for each analysis.
+**Figure 1.** Schematic of the phenotypic information available under the Complete-GY and Sparse-GY training designs and the three candidate-observation scenarios. Each pair of rows represents grain yield (GY) only or GY combined with a secondary trait (NDRE, PC1, IGYMF, or IGYMLR). The complete-GY TRN retained all training GY records, whereas sparse-GY retained 40%; secondary-trait records remained fully available. Colored tiles denote observed records: GY (orange; harvester), blue tiles indicate observed secondary trait, and gray tiles indicate missing records. Each of the ten training tiles represents 10% of the TRN records, whereas the candidate tile represents the fixed set of 100 lines. The dashed line separates the training and selection candidate sets.
 
 ## Repository organization
 
