@@ -95,7 +95,22 @@ df_seed <- Pheno_f |>
     Pheno_mean = mean(Pheno, na.rm = TRUE),
     Pheno_sd = sd(Pheno, na.rm = TRUE)
   ) |>
+  ungroup()|>
   droplevels()
+
+observation_summary <- df_seed |>
+  mutate(
+    candidate = !is.na(Gen) &
+      as.character(Gen) %in% as.character(val$Gen)
+  ) |>
+  group_by(Trait, candidate) |>
+  summarise(
+    n_total = n(),
+    n_available = sum(!is.na(Pheno)),
+    .groups = "drop"
+  )
+
+print(observation_summary)
 
 # 8. Fit MTME model ------------------------------------------
 

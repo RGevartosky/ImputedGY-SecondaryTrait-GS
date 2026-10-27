@@ -12,9 +12,8 @@
 *.Rout
 *.log
 
-# Large model outputs
-Results/*.rds
-Results/*.RData
+# Generated model outputs
+Results/
 
 # ASReml temporary files
 *.asr
