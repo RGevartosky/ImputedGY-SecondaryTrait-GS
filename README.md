@@ -117,19 +117,6 @@ Before fitting each model, inspect the retained trait-environment levels and num
 
 For scripts using `TraitEnv` prefixes to exclude imputation methods, confirm the exact capitalization and trait labels. Also note that masking `Pheno_z` after pre-standardization is not necessarily equivalent to masking raw `Pheno` before standardization.
 
-## HPC execution
-
-Individual model scripts can be executed with `Rscript` as separate scheduler jobs (for example, a SLURM job array), provided the compute environment has an operational ASReml-R installation and license. Schedule parallel jobs within cluster memory and license limits. It is recommended to benchmark one complex FA5 model before submitting the full set.
-
-## Reproducibility checklist
-
-- Confirm that each script uses the intended Complete-GY or Sparse-GY input and masking rules.
-- Confirm that candidate GY and secondary traits are masked according to the selected prediction scenario.
-- Check retained `Trait` and `TraitEnv` values after filtering.
-- Verify preprocessing and standardization against the analysis that generated manuscript results.
-- Record R/package versions, ASReml-R version, and random seeds where applicable.
-- Verify model convergence and saved outputs, and perform the prediction-accuracy evaluation described in the manuscript.
-
 ## Citation
 
 If you use this repository, please cite the associated manuscript:
