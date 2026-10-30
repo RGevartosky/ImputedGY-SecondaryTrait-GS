@@ -43,6 +43,9 @@ Ginv <- readRDS(
   here("Data", "Ginv.rds")
 )
 
+val <- read.csv(
+  here("Data", "selection_candidates.csv")
+)
 # 4. Set model parameters ------------------------------------
 
 k <- 5  # Factor-analytic rank

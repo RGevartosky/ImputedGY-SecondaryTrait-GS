@@ -1,4 +1,3 @@
-
 # ============================================================
 # GY + NDRE - Sparse-GY Training Design
 # Observed-Candidate Scenario
@@ -44,6 +43,10 @@ Pheno <- readRDS(
 Ginv <- readRDS(
   here("Data", "Ginv.rds")
 )
+val <- read.csv(
+  here("Data", "selection_candidates.csv")
+)
+
 
 # 4. Set model parameters ------------------------------------
 

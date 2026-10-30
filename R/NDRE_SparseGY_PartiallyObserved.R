@@ -1,4 +1,3 @@
-
 # ============================================================
 # GY + NDRE - Sparse-GY Training Design
 # Prediction of Partially Observed Candidates
